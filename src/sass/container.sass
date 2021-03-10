@@ -1,0 +1,39 @@
+$mq-small: 576px
+$mq-medium: 768px
+$mq-large: 992px
+$mq-ex-large: 1200px
+
+$space-s: 28px
+$space-m: 40px
+$space-l: 60px
+$space-xl: 96px
+$space-xxl: 100px
+
+%center
+    max-width: 100%
+    margin: 0 auto
+
+.container
+    animation: slideTop .4s 1
+    @extend %center
+    +mq-sm ()
+        max-width: $mq-small - 8px
+    +mq-md ()
+        max-width: $mq-medium - 8px
+    +mq-lg ()
+        max-width: $mq-large - 8px
+    +mq-xl ()
+        max-width: $mq-ex-large - 8px
+    &--
+        &space_m
+            padding: $space-m 4px
+        &space_s
+            padding: $space-s - 20px 4px
+            +mq-md ()
+                padding: $space-s 4px
+        &space_l
+            padding: $space-l 4px
+            +mq-md ()
+                padding: $space-xl 4px
+        &space_xl
+            padding: $space-xl 4px
